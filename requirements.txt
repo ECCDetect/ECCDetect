@@ -1,3 +1,4 @@
+#The following is for cloud
 numpy==1.19.2
 easydict==1.9
 torchvision==0.2.1
@@ -11,3 +12,12 @@ ipython==7.19.0
 Pillow==8.1.0
 PyYAML==5.3.1
 tensorflow==2.4.0
+
+#The following is for edge
+pyyaml
+yacs
+tqdm
+colorama
+matplotlib
+cython
+tensorboardX
