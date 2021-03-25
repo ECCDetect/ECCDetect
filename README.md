@@ -122,7 +122,7 @@ $ CUDA_VISIBLE_DEVICES=$GPU_ID python -m torch.distributed.launch \
 
 After training, you can evaluate ECCDetect on VID val dataset.
 
-Before following steps, you should run **Emqx**  in docker to support the communication between edge and cloud container. The command is (We use 21001 as port mapping in our shell file): 
+Before following steps, you should run **Emqx**  in docker to support the communication between edge and cloud container. The command is: 
 
 ```
 $ docker run -d --name ecc_broker -p {YOUR_EMQX_PORT}:1883 emqx/emqx:v4.1.1
