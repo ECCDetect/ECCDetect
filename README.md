@@ -36,7 +36,6 @@ First, Install all the python dependencies using pip:
 
 ```
 $ pip install -r requirements.txt
-$ pip install pyyaml yacs tqdm colorama matplotlib cython tensorboardX
 ```
 
 Compile the detection CUDA dependencies using following simple commands(Cloud):
