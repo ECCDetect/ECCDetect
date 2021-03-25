@@ -1,0 +1,20 @@
+FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
+
+RUN apt-get update --fix-missing && \
+    apt-get install -y python3 python3-pip python3-tk libglib2.0-dev libsm6 --fix-missing
+
+ENV PYTHONUNBUFFERED 1
+
+COPY requirements.txt /
+RUN python3 -m pip install --upgrade pip && \
+pip3 --default-timeout=1000 install -r /requirements.txt --upgrade --ignore-installed -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+COPY torch-1.0.0-cp36-cp36m-linux_x86_64.whl /
+RUN pip3 install /torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+
+COPY ecc_edge /ecc_edge/
+WORKDIR /ecc_edge/
+
+ENV PYTHONPATH /ecc_edge/
+
+CMD ["python3", "./tools/eccdetect_edge_demo.py"]

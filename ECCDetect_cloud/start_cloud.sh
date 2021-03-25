@@ -1,0 +1,2 @@
+docker rm -f ecc_detect_cloud
+docker run -it --name ecc_detect_cloud --runtime=nvidia -e ECCI_PUB_TARGETS="{'edge': 'RANDOMSTRING'}" -e ECCI_CONTAINER_TYPE=cloud -e ECCI_APP_CONTROLLER_CONTAINER="{'edge': 'RANDOMSTRING'}" -e ECCI_APP_ID=RANDOMSTRING -e ECCI_CONTAINER_NAME=cloud -e ECCI_LOCAL_BROKER_IP=$YOUR_EMQX_IP$ -e ECCI_LOCAL_BROKER_PORT=$YOUR_EMQX_PORT$ -e ECCI_LOCAL_BROKER_ID=RANDOMSTRING -e ECCI_APP_TYPE=component -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all --shm-size 8G ecc_detect_cloud:v1
