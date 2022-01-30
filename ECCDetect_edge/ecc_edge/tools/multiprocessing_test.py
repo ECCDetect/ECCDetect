@@ -87,7 +87,7 @@ def main():
     pool = mp.Pool(processes = 4)
     result = []
     
-    # Execute multiple processes asynchronously and save the results
+    # Execute multiprocessing asynchronously and save the results
     for i in range(len(bbox)):
         result.append(pool.apply_async(multi_processing, (model, bbox[i], label[i], probs[i])))
 
