@@ -200,6 +200,23 @@ After this, the results of demo will be written in `./ECCDetect_edge/ecc_edge/de
 
 
 
+## Multiprocessing Test
+
+You can test the performance of multiprocessing implementation in `./ECCDetect_edge/ecc_edge/tools/mutiprocessing_test.py`.
+
+We simulate the multi-object tracking with the template set in advance.
+
+```
+$ cd ./ECCDetect_edge/ecc_edge/
+$ export PYTHONPATH=/path/to/ecc_edge:$PYTHONPATH
+$ python ./tools/mutiprocessing_test.py
+```
+
+After this, the results of parallel time and serial time will be shown in the terminal.
+
+
+
+## 
 ## Main Results
 
 |       Type        |          Method           |                           Backbone                           |    Online    |       mAP        |      FPS(cloud)      |      FPS(edge)       |
